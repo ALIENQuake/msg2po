@@ -29,6 +29,10 @@ inputs:
     description: commit unpoify result
     default: "true"
     required: false
+  unpoify_utf8:
+    description: save tra files as utf8
+    default: "false"
+    required: false
   dir2msgstr:
     description: load manually updated translations into POs
     default: "false"
@@ -124,6 +128,7 @@ runs:
       run: $GITHUB_ACTION_PATH/action/unpoify.sh
       env:
         INPUT_UNPOIFY: ${{ inputs.unpoify }}
+        INPUT_UNPOIFY_UTF8: ${{ inputs.unpoify_utf8 }}
         INPUT_UNPOIFY_COMMIT: ${{ inputs.unpoify_commit }}
         INPUT_SINGLE_COMMIT: ${{ inputs.single_commit }}
 
