@@ -183,7 +183,7 @@ def get_enc(lang_path: str = "", file_path: str = ""):
         encoding = "utf-8"
 
     #utf_name = re.compile(".*_ee.tra$")
-    utf_name = re.compile("*.tra$")
+    utf_name = re.compile(".*\.tra$")
     if utf_name.match(filename):
         encoding = "utf-8"
 
